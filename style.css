@@ -35,12 +35,15 @@ body {
 
 .nav {
     display: flex;
+    flex-wrap: wrap;
     font-weight: bold;
     justify-content: space-around;
     align-items: center;
     margin-top: 2px;
     background-color: #0e058d;
     padding: 10px;
+    row-gap: 8px;
+    column-gap: 4px;
 }
 
 .nav a {
@@ -218,10 +221,17 @@ body {
     color: #0e058d;
 }
 
+.table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 20px;
+}
+
 .data-table {
     width: 100%;
+    min-width: 560px;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .data-table th,
@@ -305,4 +315,38 @@ body {
     color: #999;
     font-style: italic;
     margin-top: 5px;
+}
+
+body.asqc-page .section {
+    padding: 0 16px;
+}
+
+@media (max-width: 600px) {
+    body.asqc-page .header h1 {
+        font-size: 1.4em;
+    }
+
+    body.asqc-page .header h2 {
+        font-size: 1em;
+    }
+
+    body.asqc-page .nav {
+        font-size: 14px;
+    }
+
+    body.asqc-page .section h2 {
+        font-size: 1.2em;
+        padding: 8px;
+    }
+
+    body.asqc-page .data-table th,
+    body.asqc-page .data-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    body.asqc-page .qrcode-box img {
+        width: 140px;
+        height: 140px;
+    }
 }
